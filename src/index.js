@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Example:
-// The constructor methods is called, by React, every time you make a component:
+// The getDerivedStateFromProps methods is called right before the render method:
 
 class Header extends React.Component {
     constructor(props){
         super(props);
         this.state = {favoritecolor: "red"};
     }
+
+    static getDerivedStateFromProps(props, state) {
+        return {favoritecolor: props.favcol}
+    }       
     render(){
         return (
             <h1>My Favorite Color is  {this.state.favoritecolor}</h1>
@@ -16,4 +20,4 @@ class Header extends React.Component {
     }
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Header favcol="yellow" />, document.getElementById('root'));
