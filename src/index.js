@@ -9,8 +9,8 @@ class Header extends React.Component {
         super(props);
         this.state = {favoritecolor: "red"};
     }
-    static getDerivedStateFromProps(props, state){
-        return {favoritecolor: props.favcol};
+    shouldComponentUpdate(){
+        return false;
     }
 
     changeColor = () => {
@@ -27,11 +27,5 @@ class Header extends React.Component {
     };
 };
 
-ReactDOM.render(<Header favcol="yellow" />, document.getElementById('root'));
-/*
-This example has a button that changes the favorite color to blue,
-but since the getDerivedStateFromProps() method is called,
-the favorite color is still rendered as yellow
-(because the method updates the state
-with the color from the favcol attribute).
-*/
+ReactDOM.render(<Header />, document.getElementById('root'));
+
