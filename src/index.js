@@ -10,7 +10,7 @@ class Header extends React.Component {
         this.state = {favoritecolor: "red"};
     }
     shouldComponentUpdate(){
-        return false;
+        return true;
     }
 
     changeColor = () => {
