@@ -92,3 +92,9 @@ In the shouldComponentUpdate() method you can return a Boolean value that specif
 The default value is true.
 
 The example below shows what happens when the shouldComponentUpdate() method returns false:
+
+
+render
+The render() method is of course called when a component gets updated, it has to re-render the HTML to the DOM, with the new changes.
+
+The example below has a button that changes the favorite color to blue:

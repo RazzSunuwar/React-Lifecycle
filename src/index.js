@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Example:
-// if the component gets updated, the getDerivedStateFromProps() method is called:   
+// Click the button to make a change in the component's state:
 
 class Header extends React.Component {
     constructor(props){
         super(props);
         this.state = {favoritecolor: "red"};
-    }
-    shouldComponentUpdate(){
-        return true;
     }
 
     changeColor = () => {
